@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AWS CodePipeline - CloudCopilot</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #f1f1f1;
+    }
+    .section {
+      max-width: 950px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .section-heading {
+      color: #17d4fc;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .custom-card {
+      background-color: #1e2a38;
+      border: none;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      margin-bottom: 2rem;
+    }
+    a.btn-custom {
+      background-color: #17d4fc;
+      border: none;
+      color: #000;
+      font-weight: 600;
+    }
+    a.btn-custom:hover {
+      background-color: #0ea9c4;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark shadow sticky-top">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand fw-bold d-flex align-items-center" style="font-size: 2rem;" href="#">
+      <i class="bi bi-cloud-fill me-2 text-info"></i>
+      Cloud<span style="color: #00d4ff;">Copilot</span>
+    </a>
+    <div class="d-flex gap-2">
+      <a href="{% url 'home' %}" class="btn btn-outline-info btn-sm">Home</a>
+      <a href="{% url 'logout' %}" class="btn btn-outline-light btn-sm">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Content -->
+<div class="section">
+  <h2 class="text-center section-heading">AWS CodePipeline</h2>
+
+  <div class="custom-card">
+    <h5>🚀 What is AWS CodePipeline?</h5>
+    <p>
+      AWS CodePipeline is a fully managed continuous integration and continuous delivery (CI/CD) service that automates the build, test, and deploy phases of your release process every time there's a code change.
+    </p>
+  </div>
+
+  <div class="custom-card">
+    <h5>🔧 Real-World Use Case</h5>
+    <p>
+      Imagine you're developing a web application. With CodePipeline, every time you push code to GitHub, the pipeline automatically runs unit tests, builds the app using CodeBuild, and deploys it to AWS Elastic Beanstalk—within minutes.
+    </p>
+  </div>
+
+  <div class="custom-card">
+    <h5>⚙️ How It Works</h5>
+    <ol>
+      <li>Connect your source code (e.g., GitHub, CodeCommit).</li>
+      <li>Configure build and test phases using AWS CodeBuild or Jenkins.</li>
+      <li>Define deployment steps to services like ECS, Lambda, or Beanstalk.</li>
+      <li>CodePipeline triggers automatically on code changes.</li>
+    </ol>
+  </div>
+
+  <div class="custom-card">
+    <h5>🌟 Key Features</h5>
+    <ul>
+      <li>Visual workflow designer</li>
+      <li>Integrates with third-party tools like GitHub, Jenkins, JIRA</li>
+      <li>Supports manual approval actions</li>
+      <li>Custom plugin support with Lambda</li>
+      <li>Parallel and sequential actions support</li>
+      <li>Pay-as-you-go pricing</li>
+    </ul>
+  </div>
+
+  <div class="custom-card">
+    <h5>💰 Pricing</h5>
+    <ul>
+      <li><strong>First pipeline per month:</strong> Free</li>
+      <li><strong>Each additional active pipeline:</strong> $1.00/month</li>
+    </ul>
+  </div>
+
+  <div class="custom-card">
+    <h5>💡 Pro Tips</h5>
+    <ul>
+      <li>Use CodePipeline with CloudFormation for full DevOps automation.</li>
+      <li>Secure pipelines with IAM roles for each stage.</li>
+      <li>Use Amazon SNS for pipeline event notifications.</li>
+      <li>Incorporate unit tests early in the pipeline to fail fast.</li>
+    </ul>
+  </div>
+
+  <div class="text-center mt-4">
+    <h5 class="text-info fw-bold">⚙️ Try Building Your Pipeline Now!</h5>
+    <p>Jump into the console or start with AWS documentation to explore CodePipeline.</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="https://console.aws.amazon.com/codesuite/codepipeline" target="_blank" class="btn btn-custom px-4">
+        🛠️ Go to CodePipeline Console
+      </a>
+      <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html" target="_blank" class="btn btn-outline-light px-4">
+        📘 CodePipeline Docs
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

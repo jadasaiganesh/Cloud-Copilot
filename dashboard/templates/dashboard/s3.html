@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Amazon S3 - CloudCopilot</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #f1f1f1;
+    }
+    .s3-section {
+      max-width: 950px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .section-heading {
+      color: #17d4fc;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .custom-card {
+      background-color: #1e2a38;
+      border: none;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      margin-bottom: 2rem;
+    }
+    a.btn-custom {
+      background-color: #17d4fc;
+      border: none;
+      color: #000;
+      font-weight: 600;
+    }
+    a.btn-custom:hover {
+      background-color: #0ea9c4;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+
+ <!-- Navbar -->
+<nav class="navbar navbar-dark shadow sticky-top">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand fw-bold d-flex align-items-center" style="font-size: 2rem;" href="#">
+      <i class="bi bi-cloud-fill me-2 text-info"></i>
+      Cloud<span style="color: #00d4ff;">Copilot</span>
+    </a>
+    <div class="d-flex gap-2">
+      <a href="{% url 'home' %}" class="btn btn-outline-info btn-sm">Home</a>
+      <a href="{% url 'logout' %}" class="btn btn-outline-light btn-sm">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<div class="s3-section">
+  <h2 class="text-center section-heading">Amazon S3 (Simple Storage Service)</h2>
+
+  <div class="custom-card">
+    <h5>💡 What is Amazon S3?</h5>
+    <p>
+      Amazon S3 is a scalable object storage service that allows you to store and retrieve any amount of data from anywhere. It’s perfect for backups, static website hosting, data archiving, and more.
+    </p>
+  </div>
+
+  <div class="custom-card">
+    <h5>👨‍💻 Real-World Use Case</h5>
+    <p>
+      A web app needs to store user profile pictures. Instead of using a database or server drive, you upload each image to an S3 bucket. The app then fetches the image via a URL whenever needed.
+    </p>
+  </div>
+
+  <div class="custom-card">
+    <h5>🔄 How It Works</h5>
+    <ol>
+      <li>Create a bucket (a container for files).</li>
+      <li>Upload objects (images, PDFs, videos, etc.).</li>
+      <li>Control access with IAM policies or bucket permissions.</li>
+      <li>Retrieve files via HTTP(S) or SDKs.</li>
+      <li>Enable versioning, lifecycle rules, encryption as needed.</li>
+    </ol>
+  </div>
+
+  <div class="custom-card">
+    <h5>🌟 Key Features</h5>
+    <ul>
+      <li>Durable (99.999999999%) and highly available</li>
+      <li>Scalable – store unlimited data</li>
+      <li>Access controls and fine-grained permissions</li>
+      <li>Automatic backups and versioning</li>
+      <li>Static website hosting</li>
+      <li>Lifecycle rules for cost-saving</li>
+      <li>Server-side & client-side encryption</li>
+    </ul>
+  </div>
+
+  <div class="custom-card">
+    <h5>💸 Pricing Overview</h5>
+    <ul>
+      <li><strong>Storage:</strong> Charged per GB/month (Standard, IA, Glacier tiers)</li>
+      <li><strong>Requests:</strong> PUT, GET, DELETE requests are priced separately</li>
+      <li><strong>Data Transfer:</strong> Free inbound; outbound may incur costs</li>
+      <li><strong>Storage Classes:</strong> Choose based on access frequency (Standard, IA, One Zone-IA, Glacier, etc.)</li>
+    </ul>
+  </div>
+
+  <div class="custom-card">
+    <h5>🎯 Optimization Tips</h5>
+    <ul>
+      <li>Use <strong>S3 Lifecycle Policies</strong> to transition or delete data automatically</li>
+      <li>Compress and bundle files to reduce request costs</li>
+      <li>Enable <strong>CloudFront CDN</strong> for global access</li>
+      <li>Choose the right storage class for each use case</li>
+      <li>Enable S3 Intelligent-Tiering for automatic cost optimization</li>
+    </ul>
+  </div>
+
+  <div class="text-center mt-4">
+    <h5 class="text-info fw-bold">🚀 Ready to Use Amazon S3?</h5>
+    <p>Start storing files reliably and scalably with Amazon S3!</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="https://console.aws.amazon.com/s3/" target="_blank" class="btn btn-custom px-4">
+        ☁️ Launch S3 Console
+      </a>
+      <a href="https://docs.aws.amazon.com/AmazonS3/latest/gsg/GetStartedWithS3.html" target="_blank" class="btn btn-outline-light px-4">
+        📘 S3 Getting Started Guide
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

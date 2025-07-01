@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Amazon DynamoDB - CloudCopilot</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #f1f1f1;
+    }
+    .section {
+      max-width: 950px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .section-heading {
+      color: #17d4fc;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .custom-card {
+      background-color: #1e2a38;
+      border: none;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      margin-bottom: 2rem;
+    }
+    a.btn-custom {
+      background-color: #17d4fc;
+      border: none;
+      color: #000;
+      font-weight: 600;
+    }
+    a.btn-custom:hover {
+      background-color: #0ea9c4;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark shadow sticky-top">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand fw-bold d-flex align-items-center" style="font-size: 2rem;" href="#">
+      <i class="bi bi-cloud-fill me-2 text-info"></i>
+      Cloud<span style="color: #00d4ff;">Copilot</span>
+    </a>
+    <div class="d-flex gap-2">
+      <a href="{% url 'home' %}" class="btn btn-outline-info btn-sm">Home</a>
+      <a href="{% url 'logout' %}" class="btn btn-outline-light btn-sm">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<div class="section">
+  <h2 class="text-center section-heading">Amazon DynamoDB (NoSQL Database)</h2>
+
+  <div class="custom-card">
+    <h5>⚡ What is DynamoDB?</h5>
+    <p>
+      Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. It handles key-value and document data models, and it's ideal for use cases like gaming, IoT, mobile apps, and real-time analytics.
+    </p>
+  </div>
+
+  <div class="custom-card">
+    <h5>📈 Real-World Use Case</h5>
+    <p>
+      A ride-sharing app uses DynamoDB to instantly store and retrieve trip requests, driver statuses, and user ratings in real-time without managing any servers.
+    </p>
+  </div>
+
+  <div class="custom-card">
+    <h5>🔍 How It Works</h5>
+    <ol>
+      <li>Create a table with a primary key (partition + optional sort key).</li>
+      <li>Define read/write capacity (on-demand or provisioned).</li>
+      <li>Insert or query items using AWS SDK or console.</li>
+      <li>Set up indexes for flexible queries (LSI, GSI).</li>
+      <li>Scale and monitor automatically.</li>
+    </ol>
+  </div>
+
+  <div class="custom-card">
+    <h5>🔥 Key Features</h5>
+    <ul>
+      <li>Single-digit millisecond latency at scale</li>
+      <li>Fully serverless with auto-scaling</li>
+      <li>Built-in security, backups, and replication</li>
+      <li>Global Tables for multi-region access</li>
+      <li>Stream support for real-time updates</li>
+      <li>Fine-grained access control with IAM</li>
+    </ul>
+  </div>
+
+  <div class="custom-card">
+    <h5>💸 Pricing Highlights</h5>
+    <ul>
+      <li><strong>On-Demand:</strong> Pay-per-request pricing model</li>
+      <li><strong>Provisioned Capacity:</strong> Fixed read/write throughput</li>
+      <li><strong>DAX:</strong> In-memory cache for faster reads</li>
+      <li><strong>Data Transfer:</strong> Charges for cross-region access</li>
+    </ul>
+  </div>
+
+  <div class="custom-card">
+    <h5>🚀 Optimization Tips</h5>
+    <ul>
+      <li>Use Global Secondary Indexes (GSI) for flexible queries</li>
+      <li>Apply DynamoDB Streams for event-driven designs</li>
+      <li>Use DAX caching for read-heavy apps</li>
+      <li>Monitor usage with CloudWatch</li>
+      <li>Implement TTL for auto-expiring items</li>
+    </ul>
+  </div>
+
+  <div class="text-center mt-4">
+    <h5 class="text-info fw-bold">🔧 Start Building with DynamoDB</h5>
+    <p>Create your table or dive into the docs to explore all features.</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="https://console.aws.amazon.com/dynamodb/" target="_blank" class="btn btn-custom px-4">🔗 Open Console</a>
+      <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html" target="_blank" class="btn btn-outline-light px-4">📘 Official Docs</a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

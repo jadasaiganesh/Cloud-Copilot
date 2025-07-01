@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AWS CloudTrail - CloudCopilot</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #f1f1f1;
+    }
+    .section {
+      max-width: 950px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .section-heading {
+      color: #17d4fc;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .custom-card {
+      background-color: #1e2a38;
+      border: none;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      margin-bottom: 2rem;
+    }
+    a.btn-custom {
+      background-color: #17d4fc;
+      border: none;
+      color: #000;
+      font-weight: 600;
+    }
+    a.btn-custom:hover {
+      background-color: #0ea9c4;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark shadow sticky-top">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand fw-bold d-flex align-items-center" style="font-size: 2rem;" href="#">
+      <i class="bi bi-cloud-fill me-2 text-info"></i>
+      Cloud<span style="color: #00d4ff;">Copilot</span>
+    </a>
+    <div class="d-flex gap-2">
+      <a href="{% url 'home' %}" class="btn btn-outline-info btn-sm">Home</a>
+      <a href="{% url 'logout' %}" class="btn btn-outline-light btn-sm">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<div class="section">
+  <h2 class="text-center section-heading">AWS CloudTrail</h2>
+
+  <div class="custom-card">
+    <h5>🔍 What is CloudTrail?</h5>
+    <p>
+      AWS CloudTrail is a service that enables governance, compliance, and operational and risk auditing of your AWS account. It records actions taken by users, roles, or AWS services and stores event history in S3.
+    </p>
+  </div>
+
+  <div class="custom-card">
+    <h5>🕵️ Real-World Use Case</h5>
+    <p>
+      A financial services company uses CloudTrail to audit user access and detect unauthorized activities by reviewing event logs and integrating with CloudWatch for real-time alerting.
+    </p>
+  </div>
+
+  <div class="custom-card">
+    <h5>⚙️ How It Works</h5>
+    <ol>
+      <li>CloudTrail automatically logs API calls made in your AWS account.</li>
+      <li>Logs include details like identity, time, source IP, and resources accessed.</li>
+      <li>Events are stored in an S3 bucket of your choice.</li>
+      <li>You can send events to CloudWatch Logs for monitoring and alerting.</li>
+      <li>Integrate with AWS Config or SIEM tools for compliance workflows.</li>
+    </ol>
+  </div>
+
+  <div class="custom-card">
+    <h5>🌟 Key Features</h5>
+    <ul>
+      <li>Event history for the last 90 days (free)</li>
+      <li>Multi-region and organization-wide logging</li>
+      <li>Custom trails with encryption</li>
+      <li>Integration with CloudWatch and Athena</li>
+      <li>Insights to detect unusual activity</li>
+      <li>Supports AWS Organizations</li>
+    </ul>
+  </div>
+
+  <div class="custom-card">
+    <h5>✅ Best Practices</h5>
+    <ul>
+      <li>Enable CloudTrail in all regions</li>
+      <li>Encrypt logs with KMS for data protection</li>
+      <li>Use CloudTrail Insights for anomaly detection</li>
+      <li>Restrict access to S3 buckets storing CloudTrail logs</li>
+      <li>Monitor CloudTrail logs using CloudWatch</li>
+    </ul>
+  </div>
+
+  <div class="text-center mt-4">
+    <h5 class="text-info fw-bold">📜 Start Tracking AWS Activity</h5>
+    <p>Monitor every action in your AWS environment securely.</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="https://console.aws.amazon.com/cloudtrail/" target="_blank" class="btn btn-custom px-4">📊 Open CloudTrail Console</a>
+      <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html" target="_blank" class="btn btn-outline-light px-4">📘 Official Docs</a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

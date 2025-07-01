@@ -1,0 +1,140 @@
+<!-- dashboard/templates/dashboard/services/lambda.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AWS Lambda - CloudCopilot</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #f1f1f1;
+    }
+    .lambda-section {
+      max-width: 950px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .section-heading {
+      color: #17d4fc;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .custom-card {
+      background-color: #1e2a38;
+      border: none;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      margin-bottom: 2rem;
+    }
+    a.btn-custom {
+      background-color: #17d4fc;
+      border: none;
+      color: #000;
+      font-weight: 600;
+    }
+    a.btn-custom:hover {
+      background-color: #0ea9c4;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark shadow sticky-top">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand fw-bold d-flex align-items-center" style="font-size: 2rem;" href="#">
+      <i class="bi bi-cloud-fill me-2 text-info"></i>
+      Cloud<span style="color: #00d4ff;">Copilot</span>
+    </a>
+    <div class="d-flex gap-2">
+      <a href="{% url 'home' %}" class="btn btn-outline-info btn-sm">Home</a>
+      <a href="{% url 'logout' %}" class="btn btn-outline-light btn-sm">Logout</a>
+    </div>
+  </div>
+</nav>
+  <!-- Content -->
+  <div class="lambda-section">
+    <h2 class="text-center section-heading">AWS Lambda (Serverless Compute)</h2>
+
+    <div class="custom-card">
+      <h5>💡 What is Lambda?</h5>
+      <p>
+        AWS Lambda lets you run code without provisioning or managing servers. You simply upload your code and Lambda takes care of everything required to run and scale it — with high availability.
+      </p>
+    </div>
+
+    <div class="custom-card">
+      <h5>👨‍💻 Real-World Use Case</h5>
+      <p>
+        Imagine a photo-sharing app that resizes uploaded images. Instead of running a full-time server, you trigger a Lambda function every time a new image is uploaded to S3. It processes the image and saves it — all without managing infrastructure.
+      </p>
+    </div>
+
+    <div class="custom-card">
+      <h5>🔄 How It Works</h5>
+      <ol>
+        <li>Write your function code (Node.js, Python, Java, etc.).</li>
+        <li>Upload it or write inline in AWS Console.</li>
+        <li>Set a trigger (e.g., S3, API Gateway, EventBridge).</li>
+        <li>Lambda runs your code on demand — scales automatically.</li>
+        <li>You pay only for the compute time your code consumes.</li>
+      </ol>
+    </div>
+
+    <div class="custom-card">
+      <h5>🌟 Key Features</h5>
+      <ul>
+        <li>No server management</li>
+        <li>Auto-scaling and high availability by default</li>
+        <li>Supports multiple languages (Python, Node.js, Go, etc.)</li>
+        <li>Integrates with S3, DynamoDB, SNS, API Gateway, and more</li>
+        <li>Event-driven architecture</li>
+        <li>Granular control with IAM roles and policies</li>
+      </ul>
+    </div>
+
+    <div class="custom-card">
+      <h5>💸 Pricing Overview</h5>
+      <ul>
+        <li><strong>Free Tier:</strong> 1 million requests and 400,000 GB-seconds per month</li>
+        <li><strong>Request Charges:</strong> $0.20 per 1M requests beyond free tier</li>
+        <li><strong>Duration Charges:</strong> $0.00001667 per GB-second</li>
+        <li><strong>Provisioned Concurrency:</strong> Extra cost to keep functions ready to run instantly</li>
+      </ul>
+    </div>
+
+    <div class="custom-card">
+      <h5>🎯 Optimization Tips</h5>
+      <ul>
+        <li>Split monolithic apps into smaller, modular Lambda functions</li>
+        <li>Minimize deployment package size for faster cold starts</li>
+        <li>Use <strong>Provisioned Concurrency</strong> for low-latency apps</li>
+        <li>Monitor using <strong>CloudWatch Logs</strong> and <strong>X-Ray</strong></li>
+        <li>Test and benchmark memory vs execution time to optimize pricing</li>
+      </ul>
+    </div>
+
+    <div class="text-center mt-4">
+      <h5 class="text-info fw-bold">🚀 Ready to Try AWS Lambda?</h5>
+      <p>Start your serverless journey today by deploying your first function!</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="https://console.aws.amazon.com/lambda/home" target="_blank" class="btn btn-custom px-4">
+          ⚡ Launch Lambda Console
+        </a>
+        <a href="https://docs.aws.amazon.com/lambda/latest/dg/getting-started.html" target="_blank" class="btn btn-outline-light px-4">
+          📘 Lambda Getting Started Guide
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
